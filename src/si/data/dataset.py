@@ -64,6 +64,7 @@ class Dataset:
              "max": self.get_max()}
         )
         
+    '''
     def dropna (self):
         """Class method that removes samples with atleast one null (NaN) value."""
         
@@ -76,6 +77,7 @@ class Dataset:
         """
         
         return pd.DataFrame(self.X).fillna(value)
+    '''
     
     def print_dataframe(self):
         """Prints dataframe in pandas DataFrame format
@@ -83,6 +85,7 @@ class Dataset:
         return pd.DataFrame(self.X, columns=self.features, index=self.y)
     
     
+
 if __name__ == "__main__":
     x = np.array([[1, 2, 8], [1, 2, 7]])
     y = np.array([1, 2])
