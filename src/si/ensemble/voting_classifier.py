@@ -1,0 +1,2 @@
+class VotingClassifier:
+    pass
