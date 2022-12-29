@@ -1,7 +1,10 @@
+import sys
+sys.path.insert(0, '/Users/Sergiomendes/Desktop/SIB/SIB/src/si/')
+
 from typing import Callable
 import numpy as np
-from si.statistics.f_classification import f_classification
-from si.data.dataset import Dataset
+from statistic.f_classification import f_classification
+from data.dataset import Dataset
 
 class SelectPercentile:
     def __init__(self,score_function: Callable = f_classification, percentile: float = 0.25):
