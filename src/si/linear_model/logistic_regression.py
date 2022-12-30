@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from si.data.dataset import Dataset
-from si.statistic.sigmoid_function import sigmoid_function
-from si.metrics.accuracy import accuracy
+from data.dataset import Dataset
+from statistic.sigmoid_function import sigmoid_function
+from metrics.accuracy import accuracy
 
 
 class LogisticRegression:
@@ -33,7 +33,7 @@ class LogisticRegression:
         Returns:
             LogisticRegression: The fitted model.
         """
-        m, n = dataset.get_shape()
+        m, n = dataset.shape()
         
         # initialize the model parameters
         self.theta = np.zeros(n)
@@ -96,7 +96,7 @@ class LogisticRegression:
         Returns:
             float: The cost function value.
         """
-        m, n = dataset.get_shape()
+        m, n = dataset.shape()
         predictions = sigmoid_function(np.dot(dataset.X, self.theta) + self.theta_zero)
         cost = (- dataset.y * np.log(predictions)) - ((1 - dataset.y) * np.log(1 - predictions))
         cost = np.sum(cost) / n

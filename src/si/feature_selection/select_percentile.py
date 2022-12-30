@@ -22,7 +22,7 @@ class SelectPercentile:
         percentile = int(len_features * self.percentile)
         idxs = np.argsort(self.F)[-percentile:] # queremos as mehores, com o limite do percentil
         features = np.array(dataset.features)[idxs]
-        return Dataset(X=dataset.X[:, idxs], y=dataset.y, features=list(features), label=dataset.labels)
+        return Dataset(X=dataset.X[:, idxs], y=dataset.y, features=list(features), label=dataset.label)
 
     def fit_transform(self,dataset):
         self.fit(dataset)

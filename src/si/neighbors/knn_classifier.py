@@ -4,9 +4,9 @@ from typing import Callable
 
 import numpy as np
 import pandas as pd
-from si.statistic.euclidean_distance import euclidean_distance
-from si.metrics.accuracy import accuracy
-from si.data.dataset import Dataset
+from statistic.euclidean_distance import euclidean_distance
+from metrics.accuracy import accuracy
+from data.dataset import Dataset
 
 
 class KNNClassifier:

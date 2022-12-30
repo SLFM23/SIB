@@ -1,5 +1,5 @@
 import numpy as np
-from si.data.dataset import Dataset
+from data.dataset import Dataset
 
 
 class PCA:

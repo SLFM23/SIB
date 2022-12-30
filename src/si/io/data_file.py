@@ -43,6 +43,6 @@ def write_data_file(dataset, filename: str, sep: str = ",", label: Union[None, i
     np.savetxt(fname = filename, X = dataset, delimiter=sep, fmt="%s") #fmt="%s" is there to save numbers with only one decimal number
         
 if __name__ == "__main__":
-    file = r"/home/rui/Desktop/SIB/si/datasets/iris.csv"
+    file = r"/Users/Sergiomendes/Desktop/SIB/SIB/datasets/iris.csv"
     a = read_data_file(file, label=4)
     write_data_file(a, "write_data_file1.csv", label=4)
