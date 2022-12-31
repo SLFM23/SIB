@@ -35,8 +35,7 @@ def read_csv(filename:str, sep:str = ",", features: Optional[bool] = True, label
 
     return Dataset(features_dataframe, y, features_names, label_name)
 
-        
-    
+   
 def write_csv(dataset: Dataset, filename: str, sep: str = ",", features: Optional[bool] = True, label: Optional[bool] = True) -> None:
     """Writes a csv file from a dataset object
     Args:
@@ -53,22 +52,9 @@ def write_csv(dataset: Dataset, filename: str, sep: str = ",", features: Optiona
     
     if label:
         csv.insert(loc=0, column=dataset.label, value=dataset.y)
-        # csv[dataset.label] = dataset.y
         
     csv.to_csv(filename, sep = sep, index=False)
     
     
 if __name__ == "__main__":
     pass
-    # TESTING
-    # file = r"/home/rui/Desktop/SIB/si/datasets/iris.csv"
-    # a = read_csv(filename=file, sep = ",", features=True, label=4)
-    # print(a.print_dataframe())
-    # print(a.summary())
-    # write_csv(a, "csv_write_test1.csv", features=True, label=False)
-    
-    # TESTING MISSING VALUES METHODS ON DATASET CLASS
-    # file = r"/home/rui/Desktop/SIB/si/datasets/iris_missing_data.csv"
-    # a = read_csv(filename=file, sep = ",", features=True, label=4)
-    # print(a.dropna())
-    # print(a.fillna(100))

@@ -54,7 +54,6 @@ class SigmoidActivation:
         # attribute
         self.x = None
 
-    @staticmethod
     def forward(input_data: np.ndarray) -> np.ndarray:
         """
         Computes the forward pass of the layer.
@@ -64,7 +63,6 @@ class SigmoidActivation:
 
         return sigmoid_function(input_data)
 
-    @staticmethod
     def backward(input_data: np.ndarray, error: np.ndarray) -> np.ndarray:
         """
         Computes the backward pass of the layer.
@@ -83,7 +81,6 @@ class SoftMaxActivation:
     def __init__(self):
         pass
 
-    @staticmethod
     def forward(input_data: np.ndarray) -> np.ndarray:
         """
         Computes the probability of each class.
@@ -97,7 +94,6 @@ class SoftMaxActivation:
 
         return formula
 
-    @staticmethod
     def backward(input_data: np.ndarray, error: np.ndarray) -> np.ndarray:
         """
         Computes the backward pass of the layer.
@@ -115,7 +111,6 @@ class ReLUActivation:
     def __init__(self):
         pass
 
-    @staticmethod
     def forward(input_data: np.ndarray) -> np.ndarray:
         """
         Computes the rectified linear relationship.
@@ -127,7 +122,6 @@ class ReLUActivation:
 
         return data_pos
 
-    @staticmethod
     def backward(input_data: np.ndarray, error: np.ndarray) -> np.ndarray:
         """
         Computes the backwards pass of the rectified linear relationship.
@@ -144,7 +138,6 @@ class LinearActivation:
     def __init__(self):
         pass
 
-    @staticmethod
     def forward(input_data: np.ndarray) -> np.ndarray:
         """
         Computes the linear relationship.
